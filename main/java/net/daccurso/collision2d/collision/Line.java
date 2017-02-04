@@ -13,22 +13,42 @@ public class Line {
         this.y2 = y2;
     }
 
+    /**
+     * get the X start point of the Line
+     * @return x start point
+     */
     public double getX1() {
         return x1;
     }
 
+    /**
+     * get the Y start point of the Line
+     * @return y start point
+     */
     public double getY1() {
         return y1;
     }
 
+    /**
+     * get the X end point of the Line
+     * @return x end point
+     */
     public double getX2() {
         return x2;
     }
 
+    /**
+     * get the Y end point of the Line
+     * @return y end point
+     */
     public double getY2() {
         return y2;
     }
 
+    /**
+     *
+     * @return string interpretation of Line
+     */
     public String toString() {
         return "("+this.x1+"/"+this.y1+")"+
                 "/("+this.x2+"/"+this.y2+")";

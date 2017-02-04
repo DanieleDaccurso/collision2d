@@ -125,13 +125,6 @@ public class Collision implements CollisionResult {
         lines.add(new Line(r.getX() + r.getW(), r.getY(), r.getX() + r.getW(), r.getY() + r.getH()));
         lines.add(new Line(r.getX(), r.getY() + r.getH(), r.getX() + r.getW(), r.getY() + r.getH()));
 
-        Iterator<Line> lineIterator = lines.iterator();
-        while (lineIterator.hasNext()) {
-            System.out.println(lineIterator.next());
-        }
-
-        System.out.println("-----");
-
         return lines;
     }
 
@@ -156,7 +149,6 @@ public class Collision implements CollisionResult {
      * @return
      */
     private Point calculateIntersection(Line a, Line b) {
-        System.out.println("Checking: "+a+" against: "+b);
         double d = (b.getY2() - b.getY1()) * (a.getX2() - a.getX1()) - (b.getX2() - b.getX1()) * (a.getY2() - a.getY1());
         if(d == 0.0) {
             return null;
@@ -172,7 +164,6 @@ public class Collision implements CollisionResult {
                     a.getY1() + ua*(a.getY2() - a.getY1())
             );
 
-            System.out.println("intersection: "+p);
             return p;
         }
 
