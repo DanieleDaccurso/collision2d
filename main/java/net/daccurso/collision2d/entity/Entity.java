@@ -1,10 +1,11 @@
 package net.daccurso.collision2d.entity;
 
+import net.daccurso.collision2d.collision.Collision;
 import net.daccurso.collision2d.collision.CollisionResult;
 import net.daccurso.collision2d.hitbox.HitBox;
 import net.daccurso.collision2d.hitbox.RectangleContainer;
 
-public class Entity {
+public class Entity implements CollisionProvider, CollisionTarget{
     /**
      * Setting the HitBox in advance is necessary to maintain a valid state
      */
@@ -38,6 +39,6 @@ public class Entity {
     }
 
     public CollisionResult checkCollision(CollisionTarget target) {
-        return null;
+        return new Collision(this, target);
     }
 }
